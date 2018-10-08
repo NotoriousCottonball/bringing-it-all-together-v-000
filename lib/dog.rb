@@ -44,6 +44,7 @@ class Dog
       FROM dogs
       WHERE id = ?
     SQL
+    binding.pry
     Dog.new_from_db(DB[:conn].execute(sql, id).flatten)
   end
   
